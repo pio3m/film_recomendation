@@ -118,5 +118,5 @@ app.post('/api/openai', async (req, res) => {
   }
 });
 
-const PORT = 6000;
-app.listen(PORT, () => console.log(`API server running on port ${PORT}`)); 
+const PORT = process.env.PORT || 6000;
+app.listen(PORT, () => console.log(`API server running on port ${PORT}`));
