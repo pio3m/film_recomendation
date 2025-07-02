@@ -17,7 +17,7 @@ export default defineConfig({
     ],
     proxy: {
       "/api/emotions": {
-        target: "http://localhost:6000",
+        target: "https://film-recomendation-api.onrender.com",
         changeOrigin: true,
         rewrite: p => p, // zachowaj /api/emotions
       },
@@ -27,8 +27,11 @@ export default defineConfig({
         secure: true,
         rewrite: p => p.replace(/^\/api\/recommend/, "/recommend-by-sentence"),
       },
-      '/api': 'http://localhost:6000'
-    }
+      '/api': {
+        target: "https://film-recomendation-api.onrender.com",
+        changeOrigin: true,
+      }
+    }    
   },
   resolve: {
     alias: {
