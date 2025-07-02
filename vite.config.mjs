@@ -13,7 +13,7 @@ export default defineConfig({
     port: 5000,
     allowedHosts: [
       '3d5ead26-6d64-4c23-9f60-2416f1299b36-00-3f4xw4ciu0t5e.riker.replit.dev',
-      
+      'film-recomendation-wy64.onrender.com'
     ],
     proxy: {
       "/api/emotions": {
